@@ -196,7 +196,7 @@ target_vendor = unknown
 noinst_LIBRARIES = libgraphics.a
 INCLUDES = 
 libgraphics_a_SOURCES = cs.c sprite.c glSDL.c		\
-			filters.c gfxengine.cpp window.cpp sofont.cpp	\
+			filters.cpp gfxengine.cpp window.cpp sofont.cpp	\
 			display.cpp toolkit.cpp vidmodes.c	\
 			region.c
 
