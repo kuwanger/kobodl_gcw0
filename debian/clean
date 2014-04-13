@@ -1,0 +1,14 @@
+Makefile.in
+aclocal.m4
+config.guess
+config.log
+config.status
+config.sub
+configure
+data/Makefile.in
+data/gfx/Makefile.in
+data/sfx/Makefile.in
+eel/Makefile.in
+graphics/Makefile.in
+sound/Makefile.in
+stamp-h

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Kobo Deluxe
+Comment=Kobo Deluxe
+Exec=kobodl
+Terminal=false
+Type=Application
+MimeType=application/x-ms-dos-executable;application/x-ms-dos-program;application/x-ms-dos-batch;
+StartupNotify=true
+Icon=kobodl
+Categories=games;

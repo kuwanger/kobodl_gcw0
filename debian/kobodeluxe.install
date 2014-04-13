@@ -1,0 +1,5 @@
+usr/games
+var
+usr/share/man
+debian/kobodeluxe.desktop usr/share/applications
+debian/kobo-icon.xpm usr/share/pixmaps/

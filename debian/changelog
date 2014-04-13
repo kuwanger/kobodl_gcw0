@@ -1,0 +1,312 @@
+kobodeluxe (0.5.1-6) unstable; urgency=low
+
+  * Switch to automake (Closes: #648583)
+  * Change to debhelper compat 9, thus enabling hardened build flags
+  * Switch to source format 3 and remove quilt from build-deps and drop
+    README.source	
+  * Bump standards version to 3.9.2, no changed needed
+  * Remove historic postinst	
+
+ -- Moritz Muehlenhoff <jmm@debian.org>  Sun, 13 Nov 2011 09:58:32 +0100
+
+kobodeluxe (0.5.1-5) unstable; urgency=low
+
+  * add patch by Iain Lane to fix compilation error with GCC-4.4
+    Closes: #552548; thanks to Ilya Barygin
+  * clean build-dependencies from versions satisfied by Etch
+  * rules: move the list of files to clean in debian/clean
+    + trim further by using debhelper overrides
+  * Standards-Version: 3.8.3 (no changes)
+
+ -- Damyan Ivanov <dmn@debian.org>  Sat, 31 Oct 2009 15:32:31 +0200
+
+kobodeluxe (0.5.1-4) unstable; urgency=low
+
+  * add 04_enemies-pipe-decl.patch renames pipe2 symbol to pipe2_kbdl to
+    avoid clash with pipe2 from unistd.h
+    Closes: #527705 -- FTBFS
+  * add description to 03_manpage-minus-not-hyphen.patch
+  * control: remove "a " in front of the short description
+  * control: fill -data long description
+  * Standards-Version: 3.8.1 (no changes needed)
+
+ -- Damyan Ivanov <dmn@debian.org>  Sat, 09 May 2009 10:05:22 +0300
+
+kobodeluxe (0.5.1-3) unstable; urgency=low
+
+  * Adopt for Debian Games Team. Thanks, Joey for all your work! Closes:
+    #487478 -- ITA
+  * Remove conflicts/provides/replaces: xkobo, which is not even in
+    oldstable
+  * trim debian/rles a bit using debhelper 7
+  * rewrite debian/copyright listing all copyright holders/licenses
+    + add clarifications to licensing/copyright from upstream
+  * Move changes to upstream sources into separate patches
+    + integrate quilt
+  * Split graphics and sounds into arch-indep kobodeluxe-data
+  * add 03_manpage-minus-not-hyphen.patch, thanks lintian
+  * Package now conforms to Policy 3.8.0
+  * add .desktop file. Closes: #382954, #459630
+
+ -- Damyan Ivanov <dmn@debian.org>  Wed, 25 Jun 2008 14:44:23 +0300
+
+kobodeluxe (0.5.1-2) unstable; urgency=low
+
+  * Orphaned the package.
+
+ -- Joey Hess <joeyh@debian.org>  Sat, 21 Jun 2008 22:07:21 -0400
+
+kobodeluxe (0.5.1-1) unstable; urgency=low
+
+  * Add homepage field.
+  * Fix FTFBS if built twice in a row.
+  * Add -g to cflags.
+  * Avoid an infinite loop if the high score directory cannot be read, as when
+    running under gdb.
+
+ -- Joey Hess <joeyh@debian.org>  Mon, 31 Dec 2007 21:34:56 -0500
+
+kobodeluxe (0.5.0-2) unstable; urgency=low
+
+  * Improve clean rule.
+
+ -- Joey Hess <joeyh@debian.org>  Sun, 16 Dec 2007 13:51:00 -0500
+
+kobodeluxe (0.5.0-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Joey Hess <joeyh@debian.org>  Sun, 16 Dec 2007 12:51:10 -0500
+
+kobodeluxe (0.4.1-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Joey Hess <joeyh@debian.org>  Thu, 15 Nov 2007 19:40:12 -0500
+
+kobodeluxe (0.4pre10-5) unstable; urgency=low
+
+  * Current policy.
+  * New menu policy.
+  * De-hardcode path to game in menu file.
+
+ -- Joey Hess <joeyh@debian.org>  Sun, 08 Jul 2007 16:26:47 -0400
+
+kobodeluxe (0.4pre10-4) unstable; urgency=low
+
+  * Update FSF address in copyright.
+  * Current standards version.
+
+ -- Joey Hess <joeyh@debian.org>  Sun, 18 Dec 2005 17:16:41 -0500
+
+kobodeluxe (0.4pre10-3) unstable; urgency=low
+
+  * Disable reading of configs, graphics, and data from the current directory.
+    So it's safe to run kobodeluxe from anywhere w/o worry about an attacker
+    feeding it bad data. Not that I've gotten bad data to crash it (although I
+    can hang it).. just being paranoid this evening.
+
+ -- Joey Hess <joeyh@debian.org>  Sat, 23 Jul 2005 23:05:43 -0400
+
+kobodeluxe (0.4pre10-2) unstable; urgency=low
+
+  * Patch to support building with gcc 4.0, add type decl for
+    gamestatemanager_t. Closes: #314693
+
+ -- Joey Hess <joeyh@debian.org>  Fri, 17 Jun 2005 19:25:14 -0400
+
+kobodeluxe (0.4pre10-1) unstable; urgency=low
+
+  * New upstream release.
+  * Fix documentation of cheat mode. Closes: #307723
+  * Build-depend on automake1.7.
+  * Delete auto-generated files in clean to keep diff down.
+  * Auto config.sub/config.guess updates.
+
+ -- Joey Hess <joeyh@debian.org>  Wed,  4 May 2005 20:41:11 -0400
+
+kobodeluxe (0.4pre9-5) unstable; urgency=low
+
+  * Add a name to a struct in scenes.h to make it compile with gcc 4.0.
+    Closes: #284867
+
+ -- Joey Hess <joeyh@debian.org>  Thu,  9 Dec 2004 14:38:40 -0500
+
+kobodeluxe (0.4pre9-4) unstable; urgency=low
+
+  * Make scores directory 770, so users cannot access their score files
+    outside kobo. Closes: #213523
+
+ -- Joey Hess <joeyh@debian.org>  Wed,  1 Oct 2003 18:41:50 -0400
+
+kobodeluxe (0.4pre9-3) unstable; urgency=low
+
+  * Applied maxfps patch from Martijn van Oosterhout <kleptog@svana.org>.
+    Use -fps 75 (or in config file) to cap the FPS rate, great for laptops.
+
+ -- Joey Hess <joeyh@debian.org>  Fri,  7 Feb 2003 14:20:33 -0500
+
+kobodeluxe (0.4pre9-2) unstable; urgency=medium
+
+  * Drop games gid before writing ~/.kobodlrc, to prevent symlink attack
+    that would let it overwrite any file owned by group games.
+
+ -- Joey Hess <joeyh@debian.org>  Sun, 29 Dec 2002 21:48:01 -0500
+
+kobodeluxe (0.4pre9-1) unstable; urgency=low
+
+  * New upstream release, should fix va_list stuff. Closes: #164392
+  * e_getargs.c needs to include toplevel config.h to avoid link problem.
+
+ -- Joey Hess <joeyh@debian.org>  Thu, 17 Oct 2002 17:10:18 -0400
+
+kobodeluxe (0.4pre8-3) unstable; urgency=low
+
+  * Turned off some of the debug verbosity.
+  * Update config.sub/.guess for mips. Closes: #164347
+
+ -- Joey Hess <joeyh@debian.org>  Fri, 11 Oct 2002 15:23:38 -0400
+
+kobodeluxe (0.4pre8-2) unstable; urgency=low
+
+  * Modified center_token_fxp() to use an explicit signed char.
+    Closes: #163979
+  * Remove empty directories in /usr/games. Closes: #163996
+
+ -- Joey Hess <joeyh@debian.org>  Wed,  9 Oct 2002 18:50:45 -0400
+
+kobodeluxe (0.4pre8-1) unstable; urgency=low
+
+  * A new upstream source for kobo, with sound, music, better graphics, and
+    the same gameplay. It's called kobodeluxe. Closes: #114506
+  * Copied over xkobo's old changelog, etc files and modified for kobodeluxe.
+  * None of my patches to xkobo are necessary.
+  * Copied over and modified man page, since kobodeluxe has none.
+  * Copied over icon file.
+  * Includes its own fonts. Closes: #162293
+  * Updated copyright file.
+
+ -- Joey Hess <joeyh@debian.org>  Mon, 30 Sep 2002 23:12:36 -0400
+
+xkobo (1.11-13) unstable; urgency=low
+
+  * Debhelper v4.
+
+ -- Joey Hess <joeyh@debian.org>  Thu, 13 Jun 2002 17:40:24 -0400
+
+xkobo (1.11-12) unstable; urgency=low
+
+  * Moved the man page to section 6, Closes: #117249
+  * Debhelper v3.
+
+ -- Joey Hess <joeyh@debian.org>  Sat, 27 Oct 2001 23:52:00 -0400
+
+xkobo (1.11-11) unstable; urgency=low
+
+  * Now builds under gcc 3.0. Closes: #104859
+
+ -- Joey Hess <joeyh@debian.org>  Sat, 14 Jul 2001 23:59:33 -0400
+
+xkobo (1.11-10) unstable; urgency=low
+
+  * A bug in my build script caused me to upload a xkobo_1.11-9.tar.gz
+    last time; this upload should fix that (I hope).
+  * No longer uses suidmanager.
+
+ -- Joey Hess <joeyh@debian.org>  Wed, 10 Jan 2001 12:41:30 -0800
+
+xkobo (1.11-9) unstable; urgency=low
+
+  * Build-depends xutils, Closes: #81794
+
+ -- Joey Hess <joeyh@debian.org>  Wed, 10 Jan 2001 10:11:32 -0800
+
+xkobo (1.11-8) unstable; urgency=low
+
+  * Added a menu icon, Closes: #75816
+  * The icon is by Robert Cleaver Ancell <neutronium@clear.net.nz>, and is GPL.
+
+ -- Joey Hess <joeyh@debian.org>  Fri,  5 Jan 2001 17:47:09 -0800
+
+xkobo (1.11-7) unstable; urgency=low
+
+  * Use /var/games FHS directory.
+  * Added build dep on rman.
+  * Rman is generating html man pages now, I had to add some hackery to
+    delete it.
+
+ -- Joey Hess <joeyh@debian.org>  Sun,  5 Nov 2000 23:09:36 -0800
+
+xkobo (1.11-6) unstable; urgency=low
+
+  * Build deps.
+
+ -- Joey Hess <joeyh@debian.org>  Sat,  4 Dec 1999 18:30:49 -0800
+
+xkobo (1.11-5) unstable; urgency=low
+
+  * FHS
+  * Fixed all the ANSI C++ violations the compiler puked up.
+
+ -- Joey Hess <joeyh@debian.org>  Mon,  6 Sep 1999 18:51:32 -0700
+
+xkobo (1.11-4) unstable; urgency=low
+
+  * Rebuilt with latest debhelper to change how sgid binary is registered.
+
+ -- Joey Hess <joeyh@debian.org>  Tue, 27 Oct 1998 22:36:35 -0800
+
+xkobo (1.11-3) frozen unstable; urgency=low
+
+  * Moved the binary to /usr/games, per latest policy.
+  * Moved man page to section 6 and to /usr/man.
+
+ -- Joey Hess <joeyh@debian.org>  Wed, 15 Apr 1998 00:16:10 -0700
+
+xkobo (1.11-2) unstable; urgency=low
+
+  * Updated standards-version and fsf address.
+
+ -- Joey Hess <joeyh@debian.org>  Mon,  9 Feb 1998 14:36:06 -0800
+
+xkobo (1.11-1) unstable; urgency=low
+
+  * New upstream release, with pristine source.
+  * Use debhelper.
+
+ -- Joey Hess <joeyh@debian.org>  Mon, 24 Nov 1997 15:15:06 -0500
+
+xkobo (1.9-5) unstable; urgency=low
+
+  * libc6.
+  * Routine update of debian/rules:
+    Fixed binary-indep target.
+
+ -- Joey Hess <joeyh@debian.org>  Mon,  8 Sep 1997 19:28:13 -0400
+
+xkobo (1.9-4) unstable; urgency=low
+
+  * Remove /var/lib/games/xkobo-scores on purge. (#9990)
+  * Updated menu to menu-1 format.
+  * Moved menu entry out of Apps/Games into Games
+
+ -- Joey Hess <joeyh@debian.org>  Tue, 20 May 1997 13:35:27 -0400
+
+xkobo (1.9-3) unstable; urgency=low
+
+  * Added upstream changelog to the pacakge.
+  * Added a menu-file.
+  * Routine update of debian/rules:
+    New email address.
+
+ -- Joey Hess <joeyh@debian.org>  Tue, 17 Dec 1996 13:27:34 -0500
+
+xkobo (1.9-2) unstable; urgency=low
+
+  * Updated to new source format.
+  * Now registers itself with install-fvwm2menu.
+
+ -- Joey Hess <joeyh@debian.org>  Sun, 6 Oct 1996 20:10:12 -0400
+
+1.9-1
+* Initial release.

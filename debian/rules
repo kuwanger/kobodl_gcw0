@@ -1,0 +1,35 @@
+#!/usr/bin/make -f
+
+SCORES	= var/games/kobo-deluxe/scores
+PACKAGE	= $(firstword $(shell dh_listpackages))
+DATAPKG	= $(PACKAGE)-data
+TMP	= $(CURDIR)/debian/tmp
+PKGDIR	= $(CURDIR)/debian/$(PACKAGE)
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	ln -sf /usr/share/misc/config.sub
+	ln -sf /usr/share/misc/config.guess
+	aclocal
+	automake
+	autoconf
+	./configure --bindir=/usr/games --prefix=/usr --sysconfdir=/etc \
+		--mandir=/usr/share/man --sharedstatedir=/usr/share
+
+override_dh_auto_build:
+	$(MAKE) kobo_scoredir=/$(SCORES)
+
+override_dh_auto_install:
+	mkdir -p $(TMP)/$(SCORES)
+	$(MAKE) DESTDIR=$(TMP) kobo_scoredir=/$(SCORES) install
+	rm -rfv $(TMP)/usr/games/kobo-deluxe \
+		$(TMP)/usr/share/kobo-deluxe/scores
+
+override_dh_fixperms:
+	dh_fixperms
+	chown root.games $(PKGDIR)/usr/games/kobodl \
+		$(PKGDIR)/$(SCORES)
+	chmod g+s $(PKGDIR)/usr/games/kobodl
+	chmod 2775 $(PKGDIR)/$(SCORES)

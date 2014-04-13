@@ -1,0 +1,12 @@
+e_register.o: e_register.c e_register.h eel.h e_script.h e_symtab.h \
+ e_lexer.h
+
+e_register.h:
+
+eel.h:
+
+e_script.h:
+
+e_symtab.h:
+
+e_lexer.h:

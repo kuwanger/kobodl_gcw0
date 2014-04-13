@@ -1,0 +1,5 @@
+04_enemies-pipe-decl.patch
+01_graphics_window-signed-char.patch
+02_paths.patch
+03_manpage-minus-not-hyphen.patch
+05_const_charp_conversion.patch

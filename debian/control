@@ -1,0 +1,40 @@
+Source: kobodeluxe
+Section: games
+Priority: optional
+Build-Depends: debhelper (>= 7.0.50), libsdl-image1.2-dev, libsdl1.2-dev, automake, autotools-dev
+Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Uploaders: Damyan Ivanov <dmn@debian.org>
+Standards-Version: 3.9.2
+Vcs-Git: git://git.debian.org/git/pkg-games/kobodeluxe.git
+Vcs-Browser: http://git.debian.org/?p=pkg-games/kobodeluxe.git;a=summary
+Homepage: http://olofson.net/kobodl/
+
+Package: kobodeluxe
+Architecture: any
+Depends: kobodeluxe-data (= ${source:Version}),
+ ${shlibs:Depends}, ${misc:Depends}
+Description: game of space battle
+ Kobo Deluxe is a third person scrolling 2D shooter with a simple
+ and responsive control system - which you'll need to tackle the
+ tons of enemy ships that shoot at you, chase you, circle around
+ you shooting, or even launch other ships at you, while you're
+ trying to destroy the labyrinth shaped bases. There are 50
+ action packed levels with smoothly increasing difficulty, and
+ different combinations of enemies that require different tactics
+ to be dealt with successfully. It's loads of classical arcade style
+ fun.
+
+Package: kobodeluxe-data
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: kobodeluxe
+Replaces: kobodeluxe (<< 0.5.1-3~)
+Conflicts: kobodeluxe (<< 0.5.1-3~)
+Description: game of space battle -- shared data
+ Kobo Deluxe is a third person scrolling 2D shooter. There are 50
+ action packed levels with smoothly increasing difficulty, and
+ different combinations of enemies that require different tactics
+ to be dealt with successfully. It's loads of classical arcade style
+ fun.
+ .
+ This package contains architecture-independent data for kobodeluxe.

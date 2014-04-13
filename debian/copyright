@@ -1,0 +1,276 @@
+This is the Debian Linux prepackaged version of Kobo Deluxe, a game of space
+battle.
+
+This package was put together by Joey Hess <joeyh@debian.org>, with 
+sources obtained from:
+	http://olofson.net/kobodl/
+As of June 2008 it is maintained by Debian Games Team
+<pkg-games-devel@lists.alioth.debian.org>
+
+Licensing summary:
+ GNU General Public License, version 2 or later
+ GNU Lesser General Public License, version 2.1 or later
+ .
+ There are also files with uncertain licensing, see below for detailed list.
+ Upstream confirmed that they are either GPL-2+ or LGPL-2.1+ in
+ http://www.freelists.org/archives/olofsonprojects/06-2008/msg00000.html
+ .
+ On Debian systems the complete text of the GPL is in
+ /usr/share/common-licenses/GPL and LGPL is in /usr/share/common-licenses/LGPL
+
+Copyright summary:
+ Copyright (C) 1995,1996  Akira Higuchi a-higuti@math.hokudai.ac.jp
+ Copyright (C) 1999-2007, David Olofson david@olofson.net
+ Copyright (C) 2005 Erik Auerswald
+ Copyright (C) 2002 Jeremy Sheeley
+ Copyright (C) 1999, 2000, 2001 Simon Peter, <dn.tlp@gmx.net>
+ Copyright (C) 2002, Florian Schulze <fs@crowproductions.de>
+ Copyright (C) 19??, Masanao Izumo
+ .
+ There are also files with uncertain copyright, see below for detailed list.
+
+
+**************************************
+Copyright/license details
+
+Copyright of files licensed under GPL-2+
+ This program is free software; you can redistribute it and/or modify it under
+ the terms of the GNU General Public License as published by the Free Software
+ Foundation; either version 2 of the License, or (at your option) any later
+ version.
+ .
+ This program is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ details.
+ .
+ You should have received a copy of the GNU General Public License along with
+ this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
+ St, Fifth Floor, Boston, MA 02110-1301, USA.
+============================================
+scenes.cpp:
+ Copyright (C) 1995,1996  Akira Higuchi a-higuti@math.hokudai.ac.jp
+version.h:
+ Copyright (C) 1995, 1996, Akira Higuchi
+ Copyright (C) 2001, David Olofson
+config.h:
+ Copyright (C) 1995, 1996, Akira Higuchi
+ Copyright (C) 2001-2003, David Olofson
+kobo.h, radar.cpp, radar.h,
+screen.cpp:
+ Copyright (C) 1995, 1996 Akira Higuchi
+ Copyright (C) 2001-2003, 2005, 2007 David Olofson
+kobo.cpp:
+ Copyright (C) 1995, 1996 Akira Higuchi
+ Copyright (C) 2001-2003, 2005-2007 David Olofson
+ Copyright (C) 2005 Erik Auerswald
+gamectl.h:
+ Copyright (C) 1995, 1996, Akira Higuchi
+ Copyright (C) 2001, 2002, 2006, David Olofson
+gamectl.cpp:
+ Copyright (C) 1995, 1996, Akira Higuchi
+ Copyright (C) 2001 - 2003, 2006, David Olofson
+enemies.cpp, enemies.h, enemy.cpp,
+myship.cpp, myship.h, screen.h:
+ Copyright (C) 1995, 1996 Akira Higuchi
+ Copyright (C) 2001-2003, 2007 David Olofson
+manage.cpp, manage.h,
+score.cpp, score.h:
+ Copyright (C) 1995, 1996 Akira Higuchi
+ Copyright (C) 2002 Jeremy Sheeley
+ Copyright (C) 2001-2003, 2007 David Olofson
+random.cpp:
+ Copyright (C) 1995, 1996, Akira Higuchi
+ Copyright (C) 2002, David Olofson
+map.cpp, map.h, random.h:
+ Copyright (C) 1995, 1996 Akira Higuchi
+ Copyright (C) 2002, 2007 David Olofson
+scenes.h:
+ Copyright (C) 1995,1996  Akira Higuchi a-higuti@math.hokudai.ac.jp
+ Copyright (C) 2006, 2007 David Olofson
+cfgform.cpp:
+ Copyright (C) 2001-2003, 2006-2007 David Olofson
+states.cpp:
+ Copyright (C) 2001-2003 David Olofson
+ Copyright (C) 2002 Jeremy Sheeley
+ Copyright (C) 2005-2007 David Olofson
+states.h:
+ Copyright (C) 2001-2003 David Olofson
+ Copyright (C) 2002 Jeremy Sheeley
+ Copyright (C) 2007 David Olofson
+prefs.cpp, prefs.h:
+ Copyright (C) 2001-2003, 2007 David Olofson
+ Copyright (C) 2005 Erik Auerswald
+options.h:
+ Copyright (C) 2001, 2003, 2007 David Olofson
+options.cpp:
+ Copyright (C) 2001-2003, 2006-2007 David Olofson
+ Copyright (C) 2005 Erik Auerswald
+form.cpp:
+ Copyright (C) 2001, 2002, 2007 David Olofson
+ Copyright (C) 2005 Erik Auerswald
+cfgform.h:
+ Copyright (C) 2001, 2003, David Olofson
+form.h:
+ Copyright (C) 2001, 2007 David Olofson
+ Copyright (C) 2005 Erik Auerswald
+game.cpp, game.h:
+ Copyright (C) 2002, 2007 David Olofson
+kobolog.h:
+ Copyright (C) 2003, David Olofson
+dashboard.h, dashboard.cpp:
+ Copyright (C) 2003, 2007 David Olofson
+sound.cpp, sound.h:
+ Copyright (C) 2007 David Olofson
+
+
+Copyright of files licensed under LGPL:
+ This code is released under the terms of the GNU LGPL
+ .
+ It is assumed the author means LGPL-2.1 as this is what they distribute in
+ COPYING.LIB
+====================================================
+sound/audiodev.h:
+ Copyright (C) David Olofson, 1999-2001
+sound/audiodev.c:
+ Copyright (C) David Olofson, 1999, 2001
+graphics/glSDL.c, graphics/glSDL.h:
+ Copyright (C) 2001-2004, 2006-2007 David Olofson
+cfgparse.cpp, cfgparse.h:
+ Copyright (C) 2001, 2007 David Olofson
+filemap.cpp, graphics/display.cpp:
+ Copyright (C) David Olofson, 2001, 2003, 2007
+filemap.h, graphics/display.h:
+ © David Olofson, 2001
+
+
+Copyright of files licensed under LGPL-2.1+
+ This program is free software; you can redistribute it and/or modify it under
+ the terms of the GNU Lesser General Public License as published by the Free
+ Software Foundation; either version 2.1 of the License, or (at your option)
+ any later version.
+ .
+ This program is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more
+ details.
+ .
+ You should have received a copy of the GNU Lesser General Public License along
+ with this program; if not, write to the Free Software Foundation, Inc., 51
+ Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+======================================================
+sound/a_midifile.c, sound/a_midifile.h:
+ Copyright (C) 1999, 2000, 2001 Simon Peter, <dn.tlp@gmx.net>, et al.
+ stripped down, translated into C, and adapted for the Audio Engine
+ by David Olofson, 2002
+eel/symtab.h:
+ Copyright (C) 2000, 2002, David Olofson
+eel/symtab.c:
+ Copyright (C) 2000-2003, 2007 David Olofson
+graphics/toolkit.cpp, graphics/toolkit.h,
+sound/a_channel.c, sound/a_delay.c, sound/a_delay.h,
+sound/a_midi.h, sound/a_midisock.c, sound/a_midisock.h:
+ Copyright (C) 2001 David Olofson
+sound/a_bus.c, sound/a_bus.h,
+sound/a_channel.h, sound/a_control.c, sound/a_control.h,
+sound/a_filters.c, sound/a_filters.h, sound/a_globals.c,
+sound/a_globals.h, sound/a_limiter.c, sound/a_limiter.h,
+sound/a_math.h, sound/a_midicon.c, sound/a_midicon.h,
+sound/a_patch.h, sound/a_pitch.c, sound/a_pitch.h,
+sound/a_struct.c, sound/a_struct.h, sound/a_types.h,
+sound/a_voice.h:
+ Copyright (C) 2001, 2002, David Olofson
+gamestate.cpp, gamestate.h,
+sound/a_patch.c, sound/a_tools.h, sound/a_voice.c:
+ Copyright (C) 2001-2003, David Olofson
+sound/a_mixers.h:
+ Copyright (C) 2001, 2002, 2007 David Olofson
+sound/a_midi.c:
+ Copyright (C) 2001, 2003, David Olofson
+graphics/gfxengine.cpp,
+graphics/window.cpp:
+ Copyright (C) 2001-2003, 2006-2007 David Olofson
+graphics/gfxengine.h, graphics/window.h,
+sound/a_commands.c, sound/a_commands.h, sound/a_wave.c, sound/a_wave.h:
+ Copyright (C) 2001-2003, 2007 David Olofson
+graphics/filters.h:
+ Copyright (C) David Olofson, 2001, 2003
+graphics/filters.c:
+ Copyright (C) 2001, 2003, 2006, 2007 David Olofson
+graphics/cs.c, graphics/cs.h,
+graphics/sprite.c, graphics/sprite.h:
+ Copyright (C) 2001, 2003, 2007 David Olofson
+pfile.h,
+eel/_e_script.h, eel/e_lexer.c, eel/e_lexer.h, eel/e_path.c,
+eel/e_register.c, eel/e_register.h, eel/e_script.h,
+eel/e_util.h, eel/eel.h,
+sound/a_events.c, sound/a_events.h, sound/a_plugin.c, sound/a_plugin.h,
+sound/a_sequencer.c, sound/a_sequencer.h, sound/a_wca.c, sound/a_wca_h,
+sound/a_wcaosc.hi, sound/ptable.h:
+ Copyright (C) 2002, David Olofson
+eel/e_script.c:
+ Copyright (C) 2002, David Olofson
+ Copyright (C) 2002, Florian Schulze <fs@crowproductions.de>
+pfile.cpp,
+eel/e_builtin.c, eel/e_getargs.c, eel/e_util.c,
+sound/a_agw.c, sound/a_agw.h:
+ Copyright (C) 2002, 2003, David Olofson
+eel/eel.c:
+ Copyright (C) 2002, 2007 David Olofson
+logger.c, logger.h:
+ Copyright (C) 2003, David Olofson
+graphics/region.c, graphics/region.h,
+graphics/vidmodes.c, graphics/vidmodes.h:
+ Copyright (C) 2007 David Olofson
+
+
+Copyright of files licensed under LGPL-2+
+=========================================
+graphics/sofont.h
+ Originally from C Library:
+    Karl Bartel
+ Copied into a C++ object to allow multiple fonts by:
+    Luc-Olivier de Charriere
+ Further changes:
+    David Olofson <david@olofson.net>
+
+
+No explicit license. Assumed to be LGPL-2.1+
+============================================
+sound/sfifo.*:
+ (c) 2000-2002, David Olofson
+
+
+No copyright/license note at all. Assumed to be by David Olofson and licensed
+under LGPL-2.1+
+==================================================
+graphics/sofont.cpp
+
+
+Uncertain - either LGPL-2.1+ or GPL-2+
+ * This program is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by the
+ * Free Software Foundation; either version 2.1 of the License, or (at your
+ * option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+====================================================
+sound/audio.c, sound/audio.h:
+ Copyright (C) 19??, Masanao Izumo
+ Copyright (C) 2001-2003, 2007 David Olofson
+
+Files under gfx/* and sfx/* miss copyright/licensing, but upstream said in
+http://www.freelists.org/archives/olofsonprojects/06-2008/msg00004.html
+
+| Anyway, as of 0.5.1, the author of all sounds and graphics is yours
+| truly, and the license is intended to be the same as for the game
+| (non-engine code); that is GNU GPL v2.
+
+This means Copyright (c) David Olofson, 2007 and GPL-2+
