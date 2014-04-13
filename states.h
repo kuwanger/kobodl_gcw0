@@ -398,6 +398,7 @@ class st_options_system_t : public st_options_base_t
 	config_form_t *oopen()	{ return new system_options_t; }
 };
 
+#if 0
 class st_options_video_t : public st_options_base_t
 {
   public:
@@ -411,6 +412,7 @@ class st_options_graphics_t : public st_options_base_t
 	st_options_graphics_t()	{ name = "options_graphics"; }
 	config_form_t *oopen()	{ return new graphics_options_t; }
 };
+#endif
 
 class st_options_audio_t : public st_options_base_t
 {
@@ -529,8 +531,8 @@ extern st_skill_menu_t st_skill_menu;
 extern st_new_player_t st_new_player;
 extern st_options_main_t st_options_main;
 extern st_options_system_t st_options_system;
-extern st_options_video_t st_options_video;
-extern st_options_graphics_t st_options_graphics;
+//extern st_options_video_t st_options_video;
+//extern st_options_graphics_t st_options_graphics;
 extern st_options_audio_t st_options_audio;
 extern st_options_control_t st_options_control;
 extern st_options_game_t st_options_game;

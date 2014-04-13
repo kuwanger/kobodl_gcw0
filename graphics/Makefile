@@ -195,8 +195,8 @@ target_os = linux-gnu
 target_vendor = unknown
 noinst_LIBRARIES = libgraphics.a
 INCLUDES = 
-libgraphics_a_SOURCES = cs.c sprite.c filters.c glSDL.c		\
-			gfxengine.cpp window.cpp sofont.cpp	\
+libgraphics_a_SOURCES = cs.c sprite.c glSDL.c		\
+			filters.c gfxengine.cpp window.cpp sofont.cpp	\
 			display.cpp toolkit.cpp vidmodes.c	\
 			region.c
 

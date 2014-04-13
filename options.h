@@ -31,6 +31,7 @@ class system_options_t : public config_form_t
 	void build();
 };
 
+#if 0
 class video_options_t : public config_form_t
 {
 	int showmodes;
@@ -51,6 +52,7 @@ class graphics_options_t : public config_form_t
   public:
 	void build();
 };
+#endif
 
 class audio_options_t : public config_form_t
 {

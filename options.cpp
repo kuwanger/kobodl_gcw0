@@ -97,6 +97,7 @@ void system_options_t::build()
 }
 
 
+#if 0
 void video_options_t::build()
 {
 	medium();
@@ -270,7 +271,7 @@ void graphics_options_t::build()
 	button("ACCEPT", OS_CLOSE);
 	button("CANCEL", OS_CANCEL);
 }
-
+#endif
 
 void audio_options_t::build()
 {
