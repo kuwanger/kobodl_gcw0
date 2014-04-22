@@ -1,10 +1,9 @@
 [Desktop Entry]
 Name=Kobo Deluxe
-Comment=Kobo Deluxe
+Comment=An addictive space shoot'em up
 Exec=kobodl
 Terminal=false
 Type=Application
-MimeType=application/x-ms-dos-executable;application/x-ms-dos-program;application/x-ms-dos-batch;
 StartupNotify=true
 Icon=kobodl
 Categories=games;

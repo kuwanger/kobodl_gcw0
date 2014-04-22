@@ -1574,6 +1574,9 @@ kobo_gfxengine_t::kobo_gfxengine_t()
 
 void kobo_gfxengine_t::frame()
 {
+	static int canMoveX = 1;
+	static int canMoveY = 1;
+
 	sound.frame();
 
 	if(!gsm.current())
@@ -1725,16 +1728,23 @@ void kobo_gfxengine_t::frame()
 			{
 				if(ev.jaxis.value < -3200)
 				{
-					gamecontrol.press(BTN_LEFT);
-					gsm.press(BTN_LEFT);
+					if (canMoveX) {
+						gamecontrol.press(BTN_LEFT);
+						gsm.press(BTN_LEFT);
+						canMoveX = 0;
+					}
 				}
 				else if(ev.jaxis.value > 3200)
 				{
-					gamecontrol.press(BTN_RIGHT);
-					gsm.press(BTN_RIGHT);
+					if (canMoveX) {
+						gamecontrol.press(BTN_RIGHT);
+						gsm.press(BTN_RIGHT);
+						canMoveX = 0;
+					}
 				}
 				else
 				{
+					canMoveX = 1;
 					gamecontrol.release(BTN_LEFT);
 					gamecontrol.release(BTN_RIGHT);
 					gsm.release(BTN_LEFT);
@@ -1746,16 +1756,23 @@ void kobo_gfxengine_t::frame()
 			{
 				if(ev.jaxis.value < -3200)
 				{
-					gamecontrol.press(BTN_UP);
-					gsm.press(BTN_UP);
+					if (canMoveY) {
+						gamecontrol.press(BTN_UP);
+						gsm.press(BTN_UP);
+						canMoveY = 0;
+					}
 				}
 				else if(ev.jaxis.value > 3200)
 				{
-					gamecontrol.press(BTN_DOWN);
-					gsm.press(BTN_DOWN);
+					if (canMoveY) {
+						gamecontrol.press(BTN_DOWN);
+						gsm.press(BTN_DOWN);
+						canMoveY = 0;
+					}
 				}
 				else
 				{
+					canMoveY = 1;
 					gamecontrol.release(BTN_UP);
 					gamecontrol.release(BTN_DOWN);
 					gsm.release(BTN_UP);
